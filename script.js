@@ -36,7 +36,6 @@ setTimeout(()=>{
 			}
 			$('#guy-' + i).style.opacity = 1;
 			position = i;
-			console.log(position);
 		});
 	}
 }, 3000);
@@ -77,18 +76,21 @@ function coinFell (number) {
 }
 
 var coinSpeed = 1500;
-var startSpeed = 20000;
+var startSpeed = 1500;
+
+
+var coinsNum = 0;
 
 function game(){
 	timeouts.push(setTimeout(function newCoin(){
 		coinFalling(parseInt(Math.random() * 4 + 1), coinSpeed);
-		coinSpeed -= 100;
-		startSpeed -= 200;
-		coinFalling(parseInt(Math.random() * 4 + 1), coinSpeed);
-//	if (lives)	timeouts.push(setTimeout(newCoin(), startSpeed));
-		console.log("------------");
-	timeouts.push(setTimeout(newCoin(), startSpeed));
-	}, 200));
+
+		coinsNum += 1;
+		if (!(coinsNum % 5)) coinSpeed -= 100;
+		if (!(coinsNum % 10)) startSpeed -= 200;
+		console.log(startSpeed);
+		timeouts.push(setTimeout(()=>{if (lives) game();}, startSpeed));
+	}, startSpeed));
 	
 }
 
