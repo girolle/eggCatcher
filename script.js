@@ -77,8 +77,8 @@ function coinFell (number) {
 	}
 }
 
-var coinSpeed = 1500;
-var startSpeed = 1500;
+var coinSpeed = 1200;
+var startSpeed = 1200;
 
 
 var coinsNum = 0;
