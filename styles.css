@@ -1,0 +1,141 @@
+* {
+	box-sizing: border-box;
+		-moz-user-select: none;
+		-khtml-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+
+  }
+  
+  html {
+	height: 100%;
+	margin: 0;
+
+  }
+
+  body {
+	background: rgb(180,190,200);
+	background: linear-gradient(0deg, rgba(180,190,200,1) 0%, rgba(230,240,250,1) 100%);
+  }
+
+
+#front-panel {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+
+	background: rgb(190, 200, 210);
+	background: linear-gradient(0deg, rgba(190,200,210,1) 0%, rgba(200,210,220,1) 100%);
+
+	border-radius: 5px;
+
+}
+
+#front-panel-side {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	border-radius: 5px;
+	background-image: url("images/frame.png");
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+}
+
+#screen {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	height: 71%;
+	width: 83%;
+	background: rgb(143,154,154);
+	background: linear-gradient(0deg, rgba(130,150,150,1) 0%, rgba(170,183,180,1) 55%, rgba(175,191,194,1) 100%);
+	border-radius: 5px;
+}
+
+#screen-frame {
+	height: 100%;
+	width: 100%;
+	background-image: url("images/greens.png");
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.panel {
+	position: absolute;
+	height: 50%;
+	width: 50%;
+}
+
+#panel-1{
+	top: 0;
+	left: 0;
+}
+
+#panel-2{
+	top: 0;
+	left: 50%;
+}
+
+#panel-3{
+	top: 50%;
+	left: 0;
+}
+
+
+#panel-4{
+	top: 50%;
+	left: 50%;
+}
+
+.guy {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 55%;
+	left: 50%;
+	height: 90%;
+	width: 90%;
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 0.02;
+}
+
+#guy-1 {
+	background-image: url("images/guy_1.png");
+}
+
+#guy-2 {
+	background-image: url("images/guy_2.png");
+}
+
+#guy-3 {
+	background-image: url("images/guy_3.png");
+}
+
+#guy-4 {
+	background-image: url("images/guy_4.png");
+}
+
+.coin {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url('images/coin_dark.png');
+}
+
+.hidden {
+	opacity: 0.08;
+}
+
+.golden {
+	background-image: url('images/coin_gold.png');
+}
+
