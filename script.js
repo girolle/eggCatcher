@@ -47,30 +47,32 @@ var position = 1;
 var score = 0;
 var lives = 3;
 
-function coinFalling (number, speed){
+function coinFalling (number){
 	$('#coin-'+number+'-1').className = "coin";
 	for (let i = 1; i < 5; i+=1) {
 		timeouts.push(setTimeout(()=>{
 			$('#coin-'+number+'-'+i).className = "hidden coin";
 			$('#coin-'+number+'-'+(i+1)).className = "coin";
-		}, i * speed));
+		}, i * coinSpeed));
 	}
-	timeouts.push(setTimeout (()=>{coinFell(number);}, 5 * speed));
+	timeouts.push(setTimeout (()=>{coinFell(number);}, 5 * coinSpeed));
 }
 
 function coinFell (number) {
 	$('#coin-'+number+'-5').className = "hidden coin";
 	if (position == number){
 		score+=1;
-		console.log(score);
+		scoreBox();
 	}
 	else {
 		lives -= 1;
+		livesBox();
+
 		if (!lives) {
 			for (let i = 0; i < timeouts.length; i++) {
 				clearTimeout(timeouts[i]);
 			}
-			console.log('GAME OVER BITCH');
+			console.log('GAME OVER');
 		}
 	}
 }
@@ -83,19 +85,27 @@ var coinsNum = 0;
 
 function game(){
 	timeouts.push(setTimeout(function newCoin(){
-		coinFalling(parseInt(Math.random() * 4 + 1), coinSpeed);
+		coinFalling(parseInt(Math.random() * 4 + 1));
 
 		coinsNum += 1;
-		if (!(coinsNum % 5)) coinSpeed -= 100;
-		if (!(coinsNum % 10)) startSpeed -= 200;
-		console.log(startSpeed);
+		if (!(coinsNum % 5)) {
+			coinSpeed *= (14/15);
+			startSpeed *= (14/15);
+		}
 		timeouts.push(setTimeout(()=>{if (lives) game();}, startSpeed));
 	}, startSpeed));
 	
 }
 
+function scoreBox(){
+	
+	for (let i = 0; i < 4; i+=1) {
+		$('#pos-'+i).style.backgroundImage = 'url("images/' + parseInt(score % Math.pow(10, i+1) / Math.pow(10, i)) + '.png")';
+	}
+}
 
-//1.32284319
-
-
-
+function livesBox(){
+	for (let i = 0; i < 3; i+=1) {
+		if ((i+1) > lives) $('#life-'+i).style.opacity = '0.1';
+	}
+}

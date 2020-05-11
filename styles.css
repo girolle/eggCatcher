@@ -66,6 +66,45 @@
 	background-repeat: no-repeat;
 }
 
+#lives-box {
+	position: absolute;
+	height: 9%;
+	width: 18%;
+	top: 5%;
+	left: 20%;
+	display: flex;
+}
+
+.lives {
+	width: 33%;
+	height: 100%;
+	position: relative;
+	background-image: url('images/lives.png');
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#score-box {
+	position: absolute;
+	height: 12%;
+	width: 23%;
+	top: 5%;
+	left: 50%;
+	display: flex;
+}
+
+.score-num {
+	width: 25%;
+	height: 100%;
+	position: relative;
+	background-image: url('images/0.png');
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+}
+
 .panel {
 	position: absolute;
 	height: 50%;
