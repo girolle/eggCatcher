@@ -15,12 +15,12 @@ if (windowHeight * 0.8 > windowWidth) {
 	$('#left').style.top = '64%';
 	$('#left').style.left = '1%';
 	$('#left').style.width = '50vw';
-	$('#left').style.height = '30vh';
+	$('#left').style.height = '28vh';
 
 	$('#right').style.top = '64%';
 	$('#right').style.right = '1%';
 	$('#right').style.width = '50vw';
-	$('#right').style.height = '30vh';
+	$('#right').style.height = '28vh';
 }
 
 if (windowHeight * 2.17 < windowWidth) {
