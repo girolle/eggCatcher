@@ -12,12 +12,12 @@ if (windowHeight * 0.8 > windowWidth) {
 	$('#front-panel').style.transform = 'translate(-50%, 0)';
 	$('#front-panel').style.top = '10%';
 
-	$('#left').style.top = '70%';
+	$('#left').style.top = '65%';
 	$('#left').style.left = '2%';
 	$('#left').style.width = '50vw';
 	$('#left').style.height = '25vh';
 
-	$('#right').style.top = '70%';
+	$('#right').style.top = '65%';
 	$('#right').style.right = '2%';
 	$('#right').style.width = '50vw';
 	$('#right').style.height = '25vh';
