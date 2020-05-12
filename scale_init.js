@@ -6,6 +6,27 @@ var windowHeight = 0.99 * document.documentElement.clientHeight;
 var windowWidth = 0.99 * document.documentElement.clientWidth;
 
 var panelWidth = windowWidth * 0.5;
+
+if (windowHeight * 0.8 > windowWidth) {
+	panelWidth = windowWidth * 0.85;
+	$('#front-panel').style.transform = 'translate(-50%, 0)';
+	$('#front-panel').style.top = '10%';
+
+	$('#left').style.top = '70%';
+	$('#left').style.left = '2%';
+	$('#left').style.width = '50vw';
+	$('#left').style.height = '25vh';
+
+	$('#right').style.top = '70%';
+	$('#right').style.right = '2%';
+	$('#right').style.width = '50vw';
+	$('#right').style.height = '25vh';
+}
+
+if (windowHeight * 2.17 < windowWidth) {
+	panelWidth = windowHeight * 1.1;
+}
+
 var coinSize = panelWidth / 35;
 
 $('#front-panel-side').style.width = (panelWidth) + "px";
@@ -49,3 +70,10 @@ for (let i = 1; i <=5; i+=1) {
 	$('#coin-4-'+i).style.top = (topDown + topD * (i - 1)) + "%";
 	$('#coin-4-'+i).style.right = (leftD * (i - 1)) + "%";
 }
+
+$("#left").style.backgroundImage = "url('images/l" + 0 + ".png')";
+$("#left").style.backgroundImage = "url('images/l" + 1 + ".png')";
+$("#left").style.backgroundImage = "url('images/l" + 3 + ".png')";
+$("#right").style.backgroundImage = "url('images/r" + 0 + ".png')";
+$("#right").style.backgroundImage = "url('images/r" + 2 + ".png')";
+$("#right").style.backgroundImage = "url('images/r" + 4 + ".png')";

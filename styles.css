@@ -18,6 +18,14 @@
 	background: linear-gradient(0deg, rgba(180,190,200,1) 0%, rgba(230,240,250,1) 100%);
   }
 
+  #logo {
+	  position: absolute;
+	  width: 15vh;
+	  height: auto;
+	  top: 3vw;
+	  left: 3vw;
+  }
+
 
 #front-panel {
 	position: absolute;
@@ -64,6 +72,40 @@
 	background-position: center center;
 	background-size: contain;
 	background-repeat: no-repeat;
+}
+
+.bottons {
+	top: 60%;
+	position: absolute;
+	height: 30vh;
+	width: 15vw;
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#left {
+	left: 7%;
+	background-image: url("images/l0.png");
+}
+#right {
+	right: 7%;
+	background-image: url("images/r0.png");
+}
+
+.botton {
+	height: 50%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+}
+
+.up {
+	top: 0;
+}
+
+.down {
+	top: 50%;
 }
 
 #lives-box {
@@ -177,4 +219,5 @@
 .golden {
 	background-image: url('images/coin_gold.png');
 }
+
 
