@@ -116,7 +116,6 @@ function goldCoinFell (number) {
 	}
 	else {
 		lives -= 1;
-		vibrate(100);
 		livesBox();
 
 		if (!lives) {
@@ -162,4 +161,5 @@ function livesBox(){
 		if ((i+1) > lives) $('#life-'+i).style.opacity = '0.1'
 		else $('#life-'+i).style.opacity = '1'
 	}
+	vibrate(100);
 }
