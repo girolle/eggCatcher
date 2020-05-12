@@ -47,6 +47,7 @@ function changePosition(i) {
 	}
 	$('#guy-' + i).style.opacity = 1;
 	position = i;
+	vibrate(50);
 };
 
 
@@ -115,6 +116,7 @@ function goldCoinFell (number) {
 	}
 	else {
 		lives -= 1;
+		vibrate(100);
 		livesBox();
 
 		if (!lives) {
