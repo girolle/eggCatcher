@@ -163,3 +163,5 @@ function livesBox(){
 	}
 	vibrate(200);
 }
+
+$('#stab-botton').addEventListener('click', ()=>{$('#stab').style.visibility = "hidden";});
