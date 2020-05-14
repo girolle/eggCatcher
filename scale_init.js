@@ -27,6 +27,8 @@ if (windowHeight * 2.17 < windowWidth) {
 	panelWidth = windowHeight * 1.1;
 }
 
+$('#stab-text').style.width = (Math.min(windowHeight, windowWidth) * 0.75) + "px";
+
 var coinSize = panelWidth / 35;
 
 $('#front-panel-side').style.width = (panelWidth) + "px";
